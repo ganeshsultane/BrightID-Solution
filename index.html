@@ -1,31 +1,99 @@
-<section class="preview-section">
-    <div class="container">
-        <h2>Preview Your ID Card</h2>
-        
-        <div class="preview-container">
-            <!-- Preview Form -->
-            <div class="form-container">
-                <input type="text" id="name" placeholder="Full Name">
-                <input type="text" id="id-number" placeholder="ID Number">
-                <input type="text" id="designation" placeholder="Designation">
-                <input type="text" id="institution" placeholder="Institution">
-                <button onclick="updatePreview()">Generate Preview</button>
-            </div>
-            
-            <!-- Live Preview -->
-            <div class="card-preview">
-                <div class="id-card-template">
-                    <div class="id-header">
-                        <h3 id="preview-institution">Your Institution</h3>
-                    </div>
-                    <div class="id-photo"></div>
-                    <div class="id-details">
-                        <p><strong>Name:</strong> <span id="preview-name">John Doe</span></p>
-                        <p><strong>ID:</strong> <span id="preview-id">ABC-1234</span></p>
-                        <p><strong>Role:</strong> <span id="preview-designation">Student</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID Card Catalogue | Ganesh & Akash</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    header, section { padding: 40px 20px; }
+    .hero { background: linear-gradient(to right, #004aad, #5bc0de); color: white; text-align: center; padding: 80px 20px; }
+    .hero h1 { font-size: 48px; margin: 0; }
+    .hero p { font-size: 20px; margin-top: 10px; }
+
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 10%; }
+
+    .sample-card, .id-card-template { background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 10px; }
+    .sample-card img { width: 100%; border-radius: 8px; }
+
+    .preview-container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start; }
+    .form-container input { display: block; margin: 10px 0; padding: 10px; width: 250px; }
+    .form-container button { padding: 10px 20px; background-color: #004aad; color: white; border: none; cursor: pointer; }
+
+    .id-card-template { width: 250px; text-align: center; border: 2px solid #004aad; padding: 15px; }
+    .id-header { background: #004aad; color: white; padding: 10px; }
+    .id-photo { width: 100px; height: 100px; background: #ddd; border-radius: 50%; margin: 10px auto; }
+    .id-details p { margin: 5px 0; }
+
+    footer { background: #222; color: white; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Professional ID Card Designs</h1>
+    <p>Catalog of modern ID cards for schools, colleges, and companies. Preview your own before ordering!</p>
+  </header>
+
+  <!-- Sample Designs -->
+  <section>
+    <h2 class="section-title">Our Design Catalogue</h2>
+    <div class="card-grid">
+      <div class="sample-card"><img src="https://via.placeholder.com/250x150?text=College+Card" alt="College ID"></div>
+      <div class="sample-card"><img src="https://via.placeholder.com/250x150?text=School+Card" alt="School ID"></div>
+      <div class="sample-card"><img src="https://via.placeholder.com/250x150?text=Office+Card" alt="Office ID"></div>
     </div>
-</section>
+  </section>
+
+  <!-- Preview Form -->
+  <section class="preview-section">
+    <h2 class="section-title">Preview Your ID Card</h2>
+    <div class="preview-container">
+      <div class="form-container">
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="id-number" placeholder="ID Number">
+        <input type="text" id="designation" placeholder="Designation">
+        <input type="text" id="institution" placeholder="Institution">
+        <button onclick="updatePreview()">Generate Preview</button>
+      </div>
+      <div class="card-preview">
+        <div class="id-card-template">
+          <div class="id-header">
+            <h3 id="preview-institution">Your Institution</h3>
+          </div>
+          <div class="id-photo"></div>
+          <div class="id-details">
+            <p><strong>Name:</strong> <span id="preview-name">John Doe</span></p>
+            <p><strong>ID:</strong> <span id="preview-id">ABC-1234</span></p>
+            <p><strong>Role:</strong> <span id="preview-designation">Student</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2 class="section-title">Contact Us</h2>
+    <p style="text-align:center;">To place orders or for customization:</p>
+    <p style="text-align:center;"><strong>Ganesh:</strong> +91 9096605640 &nbsp; | &nbsp; <strong>Akash:</strong> +91 8379988155</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ID Card Catalogue | Designed by Ganesh & Akash
+  </footer>
+
+  <script>
+    function updatePreview() {
+      document.getElementById('preview-name').textContent = document.getElementById('name').value || 'John Doe';
+      document.getElementById('preview-id').textContent = document.getElementById('id-number').value || 'ABC-1234';
+      document.getElementById('preview-designation').textContent = document.getElementById('designation').value || 'Student';
+      document.getElementById('preview-institution').textContent = document.getElementById('institution').value || 'Your Institution';
+    }
+  </script>
+</body>
+</html>
