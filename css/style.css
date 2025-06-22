@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #004aad, #00bfff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 3em;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #004aad;
+}
+
+/* Cards */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 5%;
+}
+.sample-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+}
+.sample-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.sample-card h3 {
+  margin: 10px 0;
+  color: #222;
+}
+.sample-card p {
+  font-size: 0.9em;
+  padding: 0 10px 20px;
+  color: #555;
+}
+
+/* Colorful categories */
+.sample-card.college { border-top: 6px solid #007bff; }
+.sample-card.school  { border-top: 6px solid #28a745; }
+.sample-card.office  { border-top: 6px solid #ff5733; }
+
+/* Preview Section */
+.preview-section {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.form-container input {
+  display: block;
+  margin-bottom: 12px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container button {
+  padding: 10px 20px;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card-preview .id-card-template {
+  width: 250px;
+  border: 2px solid #004aad;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.id-header {
+  background-color: #004aad;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.id-photo {
+  width: 100px;
+  height: 100px;
+  background-color: #eaeaea;
+  border-radius: 50%;
+  margin: 15px auto;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+}
+.contact-details {
+  font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
