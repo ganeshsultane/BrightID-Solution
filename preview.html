@@ -1,31 +1,35 @@
 <section class="preview-section">
-    <div class="container">
-        <h2>Preview Your ID Card</h2>
-        
-        <div class="preview-container">
-            <!-- Preview Form -->
-            <div class="form-container">
-                <input type="text" id="name" placeholder="Full Name">
-                <input type="text" id="id-number" placeholder="ID Number">
-                <input type="text" id="designation" placeholder="Designation">
-                <input type="text" id="institution" placeholder="Institution">
-                <button onclick="updatePreview()">Generate Preview</button>
+    <h2 class="section-title">Try Live ID Card Preview</h2>
+    <div class="preview-container">
+  
+      <div class="form-container">
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="id-number" placeholder="ID Number">
+        <input type="text" id="designation" placeholder="Designation">
+        <input type="text" id="institution" placeholder="Institution">
+        <button onclick="updatePreview()">Generate Preview</button>
+        <p class="note">Preview updates instantly—no refresh needed!</p>
+      </div>
+  
+      <div class="card-preview">
+        <div class="id-card-template">
+          <div class="id-header">
+            <h3 id="preview-institution">Your Institution</h3>
+          </div>
+          <div class="id-body">
+            <div class="id-photo"></div>
+            <div class="id-details">
+              <p><strong>Name:</strong> <span id="preview-name">John Doe</span></p>
+              <p><strong>ID #:</strong> <span id="preview-id">ABC-1234</span></p>
+              <p><strong>Role:</strong> <span id="preview-designation">Student</span></p>
             </div>
-            
-            <!-- Live Preview -->
-            <div class="card-preview">
-                <div class="id-card-template">
-                    <div class="id-header">
-                        <h3 id="preview-institution">Your Institution</h3>
-                    </div>
-                    <div class="id-photo"></div>
-                    <div class="id-details">
-                        <p><strong>Name:</strong> <span id="preview-name">John Doe</span></p>
-                        <p><strong>ID:</strong> <span id="preview-id">ABC-1234</span></p>
-                        <p><strong>Role:</strong> <span id="preview-designation">Student</span></p>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="id-footer">
+            <p class="validity">Valid Thru: <span>12/2025</span></p>
+          </div>
         </div>
+      </div>
+  
     </div>
-</section>
+  </section>
+  
